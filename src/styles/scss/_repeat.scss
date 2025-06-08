@@ -1,0 +1,420 @@
+/* =============================================== */
+/* ================ repeat ======================= */
+/* =============================================== */
+
+// @import './_variables.scss';
+
+/* header__logo-link footer__logo-link */
+/* ------------------------------------------------------------------------- */
+
+.header__logo-link, .footer__logo-link, .header__logo-picture, .footer__logo-picture {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.header__logo-img, .footer__logo-img {
+  vertical-align: middle;
+}
+
+.footer__logo-descr {
+  padding-top: 6.3px;
+  display: block;
+  font-family: $second-family;
+  font-weight: 400;
+  font-size: 14px;
+  color: $grey-light;
+}
+
+.header__logo-link, .footer__logo-link {
+  position: relative;
+  outline: none;
+}
+
+.header__logo-link::after, .footer__logo-link::after {
+  content: "";
+  position: absolute;
+  top: -3px;
+  right: -5px;
+  bottom: -3px;
+  left: -3px;
+  outline: none;
+  border: 2px solid $mango;
+  outline: none;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.header__logo-link:focus-visible::after, .footer__logo-link:focus-visible::after {
+  opacity: 1;
+}
+
+/* header__burger-close-btn header__search-btn-close contacts__blind-close-btn */
+/* ------------------------------------------------------------------------- */
+
+/* .btn-close {
+
+} */
+
+.btn-close--set {
+  position: relative;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
+}
+
+.btn-close--set-burger {
+  width: 18px;
+  height: 18px;
+}
+
+.btn-close--set-search {
+  width: 23px;
+  height: 23px;
+}
+
+.btn-close--set-blind {
+  width: 20px;
+  height: 20px;
+}
+
+.btn-close--set::after {
+  content: "";
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  bottom: -5px;
+  left: -3px;
+  outline: none;
+  border: 2px solid $mango;
+  outline: none;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.btn-close__svg {
+  display: inline-block;
+  width: inherit;
+  height: inherit;
+  color: $grey;
+  fill: currentColor;
+  transition: color 0.3s ease-in-out;
+}
+
+.btn-close--set {
+  &:focus-visible:after {
+    opacity: 1;
+  }
+
+  &:active .btn-close__svg {
+    color: $orange;
+  }
+}
+
+@media (hover: hover) {
+  .btn-close--set:hover {
+    &::after {
+      opacity: 0;
+    }
+
+    .btn-close__svg {
+      color: $mango;
+    }
+  }
+}
+
+/* hero__teg projects__card-teg projects__lecture-teg */
+/* ------------------------------------------------------------------------- */
+
+.teg-link--set {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color: $white;
+  background-color: $black-medium;
+  border: 1px solid transparent;
+  outline: none;
+  transition: border-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.teg-link--set-hero {
+  position: absolute;
+  top: 15px;
+  right: 17px;
+  padding: 5px 13px;
+  min-width: 30px;
+  min-height: 28px;
+  font-family: $font-family;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.teg-link--set-projects {
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  padding: 5px 13px;
+  min-width: 30px;
+  min-height: 28px;
+  font-family: $font-family;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.teg-link--set {
+  &:focus-visible {
+    border-color: $mango;
+  }
+
+  &:active {
+    color: $orange;
+  }
+}
+
+@media (hover: hover) {
+  .teg-link--set:hover {
+    border-color: transparent;
+    color: $mango;
+  }
+}
+
+/* hero__link about__form-btn contacts__form-btn */
+/* ------------------------------------------------------------------------- */
+
+.mango-btn--set {
+  border: 3px solid transparent;
+  font-family: $font-family;
+  font-weight: 700;
+  font-size: 16px;
+  color: $white;
+  background: $mango;
+  outline: none;
+  transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.mango-btn--link {
+  vertical-align: middle;
+  display: inline-block;
+  padding: 13px 19px;
+  min-width: 159px;
+  min-height: 50px;
+  text-decoration: none;
+}
+
+.mango-btn--btn {
+  padding: 13px 19px 9px;
+  min-width: 126px;
+  min-height: 50px;
+  cursor: pointer;
+}
+
+.mango-btn--set {
+  &:focus-visible {
+    border-color: $orange;
+  }
+
+  &:active {
+    background-color: $orange;
+  }
+}
+
+@media (hover: hover) {
+  .mango-btn--set:hover {
+    border-color: transparent;
+    background-color: $brown;
+  }
+}
+
+/* about__form-input contacts__form-input */
+/* ------------------------------------------------------------------------- */
+
+.input-box--set {
+  position: relative;
+}
+
+.input-box__input {
+  border: 1px solid $grey-light;
+  padding: 16px 23px 12px;
+  width: 100%;
+  min-height: 50px;
+  font-family: $font-family;
+  font-weight: 400;
+  font-size: 16px;
+  color: $black-medium;
+  background-color: $grey-light;
+  outline: none;
+  transition: border-color 0.3s ease-in-out;
+
+  &::selection {
+    background-color: $red-light;
+  }
+}
+
+.input-box__input--black-light {
+  border-color: $black-light;
+  color: $white;
+  background-color: $black-light;
+}
+
+.input-box__input--textarea {
+  vertical-align: middle;
+  min-height: 150px;
+  resize: none;
+}
+
+.input-box__label {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border: 1px solid transparent;
+  padding: 16px 22px 12px;
+  font-family: $font-family;
+  font-weight: 400;
+  font-size: 16px;
+  color: $grey-bold;
+  user-select: none;
+  cursor: text;
+  transition: color 0.3s ease-in-out, opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.input-box__label--black-light {
+  color: $grey-medium;
+}
+
+.input-box__input:focus-visible {
+  border-color: $mango;
+}
+
+.input-box:focus-within .input-box__label {
+  visibility: hidden;
+  opacity: 0;
+}
+
+@media (hover: hover) {
+  .input-box:hover .input-box__label, .input-box__input:not(:focus-visible):hover {
+    color: $mango;
+  }
+}
+
+.input-box__input {
+  &:active {
+    border-color: transparent;
+    color: $orange;
+  }
+
+  &:valid + .input-box__label {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+.input-box__error {
+  position: absolute;
+  top: 2px;
+  left: 22px;
+  padding: 0;
+  font-family: $font-family;
+  font-weight: 400;
+  font-size: 9px;
+  color: $red-medium;
+  user-select: none;
+  cursor: none;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.input-box__error--hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
+/* header__burger-tel-link contacts__address-tell-link */
+/* ------------------------------------------------------------------------- */
+
+.tell-link--set {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  color: $mango;
+  text-decoration: none;
+  background-color: transparent;
+  outline: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.tell-link--set-burger {
+  font-family: $second-family;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.tell-link--set-address {
+  min-height: 22px;
+  font-family: $second-family;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+  font-style: normal;
+}
+
+.tell-link__svg {
+  vertical-align: middle;
+  display: inline-block;
+  fill: $mango;
+  transition: fill 0.3s ease-in-out;
+}
+
+.tell-link__svg--burger {
+  width: 20px;
+  height: 20px;
+}
+
+.tell-link__svg--address {
+  width: 22px;
+  height: 22px;
+}
+
+.tell-link--set {
+  &::after {
+    content: "";
+    position: absolute;
+    top: -5px;
+    right: -6px;
+    bottom: -5px;
+    left: -3px;
+    outline: none;
+    border: 2px solid $mango;
+    outline: none;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  &:focus-visible::after {
+    opacity: 1;
+  }
+
+  &:active {
+    color: $orange;
+
+    .tell-link__svg {
+      fill: $orange;
+    }
+  }
+}
+
+@media (hover: hover) {
+  .tell-link--set:hover {
+    &::after {
+      opacity: 0;
+    }
+
+    color: $brown;
+
+    .tell-link__svg {
+      fill: $brown;
+    }
+  }
+}
